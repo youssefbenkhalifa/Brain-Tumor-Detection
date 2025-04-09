@@ -50,12 +50,12 @@ Several traditional machine learning models were tested initially:
 
 | Model               | Accuracy |
 |---------------------|----------|
-| Logistic Regression | 0.73     |
+| Logistic Regression | 0.52     |
 | Decision Tree       | 0.59     |
-| Random Forest       | 0.80     |
+| Random Forest       | 0.60     |
 | XGBoost             | 0.78     |
 | Logistic NN         | 0.72     |
-| CNN (from scratch)  | 0.51     |
+| CNN (from scratch)  | 0.63     |
 
 Random Forest outperformed other classical models but lacked spatial context, motivating the use of deep learning.
 
@@ -73,7 +73,7 @@ Pretrained models were fine-tuned for binary classification:
 - ResNet18 and ResNet20
 - ResNet50
 - MobileNetV3
-- EfficientNet
+- EfficientNetB3
 
 All models used:
 
@@ -139,7 +139,7 @@ enhanced_training_runs/final_boosted_trial_v2/weights/best.pt
 
 ### Classification
 
-Use the fine-tuned transfer learning model (e.g., EfficientNet or ResNet) for binary tumor detection:
+Use the fine-tuned transfer learning model (e.g., EfficientNetB3 or ResNet) for binary tumor detection:
 
 ```python
 model.predict(image_path)  # Returns 0 or 1
